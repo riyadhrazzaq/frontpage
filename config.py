@@ -1,0 +1,1 @@
+PROJECT_PROPERTIES = ['title','description','date','image','more',"tools"]

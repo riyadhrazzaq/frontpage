@@ -1,0 +1,8 @@
+{
+	"title": "Project From JSON File 2",
+	"description": "Lorem ipsum onek kisu geratunm",
+	"date": "12-05-2021",
+	"image": "https://i.postimg.cc/BZCw6y5z/Group-1log-reg.png",
+	"more": "http://kaggle.com/datasets",
+	"tools": ["Tensorflow","Flask"]
+}
