@@ -1,27 +1,46 @@
 <div class='container'>
-  <h1 class="my-4">
-  <small>Works and other stuff</small>
-  </h1>
-  {% for item in dictionary %}
-    <div class="row">
-      <div class="col-md-7">
-        <a href="#">
-          <img class="img-fluid rounded mb-3 mb-md-0" src="{{ item['image'] }}" alt="">
-        </a>
-      </div>
-      <div class="col-md-5">
-        <h3> {{ item['title'] }} </h3>
-        <div class="overflow-auto"> {{ item['description'] }} </div>
-        <p>Date:<i> {{ item['date'] }} </i></p>
-        {% if item['tools'] is defined %}
-          {% for machine in item['tools'] %}
-            <span class="badge badge-pill badge-dark"> {{ machine }} </span>
-          {% endfor %}
+  {% for section in contents %}
+    <h1 class="my-4">
+    <small># {{ section['heading'] }}</small>
+    </h1>
+    {% for item in section['data'] %}
+      <div class="row">
+        {% if item['image'] is defined %}
+          <div class="col-md-7">
+            <a href="#">
+              <img class="img-fluid rounded mb-3 mb-md-0" src="{{ item['image'] }}" alt="">
+            </a>
+          </div>
+          <div class="col-md-5">
+          {% else %}
+            <div class="col-md-12">
+            {% endif %}
+            <h3 id='title'> {{ item['title'] }} </h3>
+            {% if item['description'] is defined  %}
+              <div class="overflow-auto"> {{ item['description'] }} </div>
+            {% endif %}
+            {% if item['reference'] is defined %}
+              <samp>{{ item['reference'] }}</samp>
+            {% endif %}
+            <p>Date:<i> {{ item['date'] }} </i></p>
+            {% if item['tools'] is defined %}
+            <div>
+              {% for machine in item['tools'] %}
+                <span class="badge badge-pill badge-dark"> {{ machine }} </span>
+              {% endfor %}
+            </div>
+            {% endif %}
+            {% if item['more'] is defined  %}
+              <a class="btn btn-dark float-right" href="{{ item['more'] }}">More</a>
+            {% endif %}
+          </div>
+        </div>
+        <!-- /.row -->
+        {% if loop.last %}
+        <hr id='section_break'>
+        {% else %}
+        <hr>
         {% endif %}
-        <a class="btn btn-dark float-right" href="{{ item['more'] }}">More</a>
-      </div>
-    </div>
-    <!-- /.row -->
-    <hr>
-  {% endfor %}
-</div>
+      {% endfor %}
+    {% endfor %}
+  </div>
