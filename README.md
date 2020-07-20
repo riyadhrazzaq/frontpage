@@ -1,8 +1,10 @@
 # Frontpage 
-A small and hackable portfolio app built with Flask and Bootstrap.
+A small and hackable portfolio app built with Flask and Bootstrap. Demo [here](https://abdurrazzaq.pythonanywhere.com)
+![a screenshot of the site](/static/image/screenshot.png)
+
 # Configure and Run
 ```
-git clone https://github.com/riyadhrazzaq/yellow.git
+git clone https://github.com/riyadhrazzaq/frontpage.git
 cd yellow
 python -m venv venv
 source venv/bin/activate
@@ -14,19 +16,18 @@ python app.py
 ## Basic
 Current structure of the project is,
 ```
-frontpage/
-	content/
-		project/
-			somefile.json
-			anotherfile.json
-		publication/
-			someproject.json
-			anotherproject.json
-	static/
-	templates/
-	app.py
-	config.py
-	requirements.txt
+content/
+	project/
+		somefile.json
+		anotherfile.json
+	publication/
+		someproject.json
+		anotherproject.json
+static/
+templates/
+app.py
+config.py
+requirements.txt
 ```
 
 `content/` folder is the backbone of this site. This is where project/publications and other stuff lives. For each section in the site such as **Works, Publication** etc, it needs a folder by that name. Inside them, each project files are stored in [JSON](http://www.json.org/example.html) file. Each project will have its own file. Any JSON file may have following properties, 
