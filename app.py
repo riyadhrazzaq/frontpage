@@ -8,18 +8,32 @@ app.config.from_pyfile("config.py")
 
 @app.route("/")
 def home():
-    all_projects = []
-    path = 'assets/content/'
-    for item in os.listdir(path):
-        file = open(path+item)
-        project = json.load(file)
+    """
+    Variables
+    ---------
+    contents: dict of dicts. Each dict is a folder in 'content/'
+    """
+    contents = []
+    path = app.config['CONTENT_PATH']
+    section_config = app.config['SECTIONS']
+    
 
-        tmp = {}
-        for i in app.config['PROJECT_PROPERTIES']:
-            if project.get(i) is not None:
-                tmp[i] = project[i]
-        all_projects.append(tmp)
-    return render_template('main.html',dictionary=all_projects)
+    for section in section_config:
+
+        section_path = path+section['heading']+'/'
+
+        level_one = {}
+        level_one['heading'] = section['heading']
+        level_one['data'] = []
+        for item in os.listdir(section_path):
+            file = open(section_path+item)
+            target = json.load(file)
+
+            level_one['data'].append(target)
+
+        contents.append(level_one)
+        
+    return render_template('main.html',contents=contents)
 
 
 if __name__ == '__main__':

@@ -1,0 +1,17 @@
+@font-face {
+  font-family: 'Playfair Display';
+  src: url('../fonts/Playfair_Display/static/PlayfairDisplay-Regular.ttf');
+}
+
+
+#title, small{
+	font-family: 'Playfair Display';
+}
+
+#section_break{
+   border-top: dashed 4px grey;
+}
+
+img{
+	object-fit: cover;
+}
