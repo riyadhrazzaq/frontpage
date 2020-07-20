@@ -1,7 +1,6 @@
 {
 	"title": "Tag Suggestion System",
-	"date": "12-2-13",
 	"more": "www.arxiv-sanity.com",
 	"tools": ["Machine Learning", "DeepLearning"],
-	"reference": "Razzaq, A et al."
+	"reference": "Suykens, Johan AK, and Joos Vandewalle. \"Least squares support vector machine classifiers.\" Neural processing letters 9.3 (1999): 293-300."
 }

@@ -1,12 +1,12 @@
 <div class="jumbotron jumbotron-fluid">
   <div class="container bg-white p-4">
-    <h1 class="display-4">Md. Abdur Razzaq Riyadh</h1>
-    <p class="lead">Machine Learning Engineer</p>
+    <h1 class="display-4"> {{ config['ME'] }} </h1>
+    <p class="lead"> {{ config['TITLE'] }} </p>
     <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
       <div class="btn-group mr-2" role="group" aria-label="First group">
-        <a href="https://github.com/riyadhrazzaq" target='_blank' class="btn btn-warning" role="button"><i class="fab fa-github"></i> Github</a>
-        <a href="https://riyadhrzzaq.github.io" target='_blank' class="btn btn-warning" role="button"><i class="far fa-keyboard"></i> Blog</a>
-        <a href="https://riyadhrzzaq.github.io" target='_blank' class="btn btn-warning" role="button"><i class="fab fa-twitter"></i> Twitter</a>
+        {% for domain,data in config['SOCIAL'].items() %}
+        <a href="{{ data[0] }}" target='_blank' class="btn btn-warning" role="button"><i class=" {{ data[1] }} "></i> {{ domain }} </a>
+        {% endfor %}
       </div>
     </div>
   </div>

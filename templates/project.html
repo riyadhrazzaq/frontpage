@@ -22,7 +22,11 @@
             {% if item['reference'] is defined %}
               <samp>{{ item['reference'] }}</samp>
             {% endif %}
-            <p>Date:<i> {{ item['date'] }} </i></p>
+
+            {% if item['date'] is defined %}
+              <p>Date:<i> {{ item['date'] }} </i></p>
+            {% endif %}
+
             {% if item['tools'] is defined %}
             <div>
               {% for machine in item['tools'] %}
@@ -37,6 +41,7 @@
         </div>
         <!-- /.row -->
         {% if loop.last %}
+        <br>
         <hr id='section_break'>
         {% else %}
         <hr>

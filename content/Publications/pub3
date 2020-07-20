@@ -1,8 +1,6 @@
 {
 	"title": "Tag Suggestion System",
-	"date": "12-2-13",
-	"image": "https://i.postimg.cc/BZCw6y5z/Group-1log-reg.png",
 	"more": "www.arxiv-sanity.com",
 	"tools": ["Machine Learning", "DeepLearning"],
-	"reference": "Razzaq, A et al."
+	"reference": "Friedl, Mark A., and Carla E. Brodley. \"Decision tree classification of land cover from remotely sensed data.\" Remote sensing of environment 61.3 (1997): 399-409."
 }

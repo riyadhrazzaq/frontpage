@@ -12,6 +12,6 @@
    border-top: dashed 4px grey;
 }
 
-img{
-	object-fit: cover;
+#footer{
+	text-align: center;
 }
