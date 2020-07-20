@@ -1,11 +1,11 @@
 <div class="jumbotron jumbotron-fluid">
   <div class="container bg-white p-4">
-    <h1 class="display-4"> {{ config['ME'] }} </h1>
-    <p class="lead"> {{ config['TITLE'] }} </p>
+    <h1 id="title" class="display-4"> {{ config['ME'] }} </h1>
+    <p id="title" class="lead"> {{ config['TITLE'] }} </p>
     <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
       <div class="btn-group mr-2" role="group" aria-label="First group">
         {% for domain,data in config['SOCIAL'].items() %}
-        <a href="{{ data[0] }}" target='_blank' class="btn btn-warning" role="button"><i class=" {{ data[1] }} "></i> {{ domain }} </a>
+        <a href="{{ data[0] }}" target='_blank' class="btn btn-light" role="button"><i class=" {{ data[1] }} "></i> {{ domain }} </a>
         {% endfor %}
       </div>
     </div>

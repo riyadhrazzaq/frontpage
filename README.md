@@ -1,6 +1,5 @@
-# yellow
-A small portfolio app built with Flask and Bootstrap.
-
+# Frontpage 
+A small and hackable portfolio app built with Flask and Bootstrap.
 # Configure and Run
 ```
 git clone https://github.com/riyadhrazzaq/yellow.git

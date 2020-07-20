@@ -13,11 +13,12 @@ def home():
     ---------
     contents: dict of dicts. Each dict is a folder in 'content/'
     """
-    contents = []
-    path = app.config['CONTENT_PATH']
+    
+    base = os.path.abspath(os.getcwd())+'/'
+    path = base+app.config['CONTENT_PATH']
     section_config = app.config['SECTIONS']
     
-
+    contents = []
     for section in section_config:
 
         section_path = path+section['heading']+'/'
